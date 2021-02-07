@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introducción
 
-En este documento trabajaremos para explorar la identidad de plantas extintas en diferentes ecosistemas
+En este documento trabajaremos para explorar la identidad de plantas extintas en diferentes ecosistemas segun la [*IUCN*](https://www.iucnredlist.org/)
 
 ## Subtítulo
 
