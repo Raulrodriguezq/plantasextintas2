@@ -1,0 +1,16 @@
+---
+title: "Trabajo con plantas extintas"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introducción
+
+En este documento trabajaremos para explorar la identidad de plantas extintas en diferentes ecosistemas
+
+## Subtítulo
+
+
