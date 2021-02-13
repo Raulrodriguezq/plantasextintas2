@@ -32,8 +32,7 @@ El código que se ejecutará es usado para resolver un problema
 para colocar en la base de datos solo los correspondientes a Chile
 
 ```{r}
-Chile<-plants %>% 
-  dplyr::filter(country==Chile)
+Chile<-plants %>%dplyr::filter(country==Chile)
 
 ```
 
