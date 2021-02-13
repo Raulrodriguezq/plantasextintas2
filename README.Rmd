@@ -34,7 +34,19 @@ para colocar en la base de datos solo los correspondientes a Chile, y solo usar 
 ```{r}
 Chile<-plants %>%
   dplyr::filter(country=="chile") %>% 
-  dplyr::select(binomial_name,country, red_list_category)
+  dplyr::select(binomial_name,country, red_list_category, continent)
 Chile
+```
+
+especie por país
+
+```{r}
+Resumen<-plants %>%   
+dplyr::filter(continent=="South America") %>% 
+  group_by(country) %>% 
+  summarise(n_species=n())
+Resumen
+
+
 ```
 

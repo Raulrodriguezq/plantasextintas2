@@ -56,10 +56,38 @@ solo usar las columnas del pais (*coutrty*), las especies
 ``` r
 Chile<-plants %>%
   dplyr::filter(country=="chile") %>% 
-  dplyr::select(binomial_name,country, red_list_category)
+  dplyr::select(binomial_name,country, red_list_category, continent)
 Chile
 ```
 
-    ## # A tibble: 0 x 3
-    ## # ... with 3 variables: binomial_name <chr>, country <chr>,
-    ## #   red_list_category <chr>
+    ## # A tibble: 0 x 4
+    ## # ... with 4 variables: binomial_name <chr>, country <chr>,
+    ## #   red_list_category <chr>, continent <chr>
+
+especie por país
+
+``` r
+Resumen<-plants %>%   
+dplyr::filter(continent=="South America") %>% 
+  group_by(country) %>% 
+  summarise(n_species=n())
+```
+
+    ## `summarise()` ungrouping output (override with `.groups` argument)
+
+``` r
+Resumen
+```
+
+    ## # A tibble: 9 x 2
+    ##   country             n_species
+    ##   <chr>                   <int>
+    ## 1 Argentina                   1
+    ## 2 Bolivia                     1
+    ## 3 Brazil                     10
+    ## 4 Chile                       2
+    ## 5 Colombia                    6
+    ## 6 Ecuador                    52
+    ## 7 Peru                        4
+    ## 8 Trinidad and Tobago         6
+    ## 9 Venezuela                   1
