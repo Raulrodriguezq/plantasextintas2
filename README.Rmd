@@ -31,4 +31,9 @@ El código que se ejecutará es usado para resolver un problema
 [slide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) 
 para colocar en la base de datos solo los correspondientes a Chile
 
+```{r}
+Chile<-plants %>% 
+  dplyr::filter(country==Chile)
+
+```
 

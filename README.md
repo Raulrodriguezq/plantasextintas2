@@ -44,3 +44,9 @@ plants <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
     ##   red_list_category = col_character()
     ## )
     ## i Use `spec()` for the full column specifications.
+
+## Filtrando los datos para resolver el ejemplo 1
+
+El código que se ejecutará es usado para resolver un problema
+[slide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf)
+para colocar en la base de datos solo los correspondientes a Chile
