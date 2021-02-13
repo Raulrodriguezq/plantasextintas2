@@ -49,4 +49,17 @@ plants <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
 
 El código que se ejecutará es usado para resolver un problema
 [slide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf)
-para colocar en la base de datos solo los correspondientes a Chile
+para colocar en la base de datos solo los correspondientes a Chile, y
+solo usar las columnas del pais (*coutrty*), las especies
+(*binomial\_name*) y las categoria IUCN (*red\_list\_category*)
+
+``` r
+Chile<-plants %>%
+  dplyr::filter(country=="chile") %>% 
+  dplyr::select(binomial_name,country, red_list_category)
+Chile
+```
+
+    ## # A tibble: 0 x 3
+    ## # ... with 3 variables: binomial_name <chr>, country <chr>,
+    ## #   red_list_category <chr>
